@@ -10,51 +10,26 @@
             margin-bottom: 12px;
             padding: 12px;
         }
-
-        #inp2,
-        #btn2 {
-            display: none;
-        }
     </style>
 </head>
 
 <body>
-    <input type="number" name="" id="inp" placeholder="Enter your number"><br>
-    <button id="btn" onclick="basic()">Genrate the OTP</button>
+    <button id="btn2" onclick="otpgen()">Genrate otp</button><br>
 
-
-    <input type="number" id="inp2" placeholder="enter the otp"><br>
-    <button id="btn2">Submit</button>
-
+    <span id="sp"></span>
     <script>
 
-        function basic() {
-            let a = document.getElementById('inp').style.display = 'none';
-            let b = document.getElementById('btn').style.display = 'none';
-
-            let c = document.getElementById('inp2').style.display = 'inline'
-            let d = document.getElementById('btn2').style.display = 'inline'
-            otpgen()
-
-        }
-
-    
-
         function otpgen() {
-            
+            let i;
             let ar = ""
             for (let i = 0; i < 4; i++) {
-                let a = Math.floor(Math.random() * 11)
+                let a = Math.floor(Math.random() * 10)
                 ar = ar + a
             }
 
-            console.log("opt:",ar)
-            return ar
+            let a = document.getElementById('sp')
+            a.innerHTML = "your otp is: " + ar
         }
-
-
-
-
     </script>
 </body>
 
