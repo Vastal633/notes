@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            margin-bottom: 12px;
+            padding: 12px;
+        }
+
+        #inp2,
+        #btn2 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="number" name="" id="inp" placeholder="Enter your number"><br>
+    <button id="btn" onclick="basic()">Genrate the OTP</button>
+
+
+    <input type="number" id="inp2" placeholder="enter the otp"><br>
+    <button id="btn2">Submit</button>
+
+    <script>
+
+        function basic() {
+            let a = document.getElementById('inp').style.display = 'none';
+            let b = document.getElementById('btn').style.display = 'none';
+
+            let c = document.getElementById('inp2').style.display = 'inline'
+            let d = document.getElementById('btn2').style.display = 'inline'
+            otpgen()
+
+        }
+
+    
+
+        function otpgen() {
+            
+            let ar = ""
+            for (let i = 0; i < 4; i++) {
+                let a = Math.floor(Math.random() * 11)
+                ar = ar + a
+            }
+
+            console.log("opt:",ar)
+            return ar
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
